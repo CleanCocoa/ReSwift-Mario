@@ -4,17 +4,19 @@ import ReSwift
 
 public enum Walking: ReSwift.Action {
     case left, right
+}
 
-    internal var offset: Double {
+extension Walking: StateApplicable {
+    private var offset: Double {
         switch self {
         case .left:  return -2
         case .right: return +2
         }
     }
-}
-
-func reduce(_ walking: Walking, state: RootState) -> RootState {
-    var state = state
-    state.x += walking.offset
-    return state
+    
+    func applied(to state: RootState) -> RootState {
+        var state = state
+        state.x += offset
+        return state
+    }
 }
