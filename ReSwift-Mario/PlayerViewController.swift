@@ -2,6 +2,7 @@
 
 import UIKit
 import ReSwift
+import State
 
 class PlayerViewController: UIViewController, ReSwift.StoreSubscriber {
     // MARK: Model
@@ -43,10 +44,23 @@ class PlayerViewController: UIViewController, ReSwift.StoreSubscriber {
 
     // MARK: Updates
 
-    func newState(state position: (x: Double, y: Double)) {
+    struct PlayerPosition: Equatable {
+        let x: Double
+        let y: Double
+    }
+
+    func newState(state position: PlayerPosition) {
         precondition(playerPositionConstraints != nil, "Install PlayerViewController into view hierarchy first using `constrainPlayer(toGround:)`.")
 
         playerPositionConstraints.x.constant = CGFloat(position.x)
         playerPositionConstraints.y.constant = -CGFloat(position.y)
+    }
+}
+
+extension PlayerViewController.PlayerPosition {
+    init(rootState: RootState) {
+        self.init(
+            x: rootState.x,
+            y: rootState.y)
     }
 }

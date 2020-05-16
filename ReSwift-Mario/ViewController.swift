@@ -23,7 +23,9 @@ class ViewController: UIViewController {
 
         // Subscribing fires an update for the initial state immediately, so make sure all
         // positional properties are set up already.
-        store.subscribe(playerViewController) { $0.select { ($0.x, $0.y)  }}
+        store.subscribe(playerViewController) {
+            $0.select(PlayerViewController.PlayerPosition.init(rootState:))
+                .skipRepeats() }
     }
 
     private func addSky() {
