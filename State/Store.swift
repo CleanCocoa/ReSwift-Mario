@@ -2,19 +2,30 @@
 
 import ReSwift
 
-public struct RootState: ReSwift.StateType {
-    public let x: Double = 100
-    public let y: Double = 0
+public struct RootState: ReSwift.StateType, Equatable {
+    public var x: Double = 100
+    public var y: Double = 0
 }
 
 public func store() -> ReSwift.Store<RootState> {
     return ReSwift.Store(
-        reducer: rootReducer,
+        reducer: reduce(action:rootState:),
         state: RootState(),
         middleware: [],
         automaticallySkipsRepeats: false)
 }
 
-func rootReducer(action: Action, state: RootState?) -> RootState {
-    return state ?? RootState()
+func reduce(action: Action, rootState: RootState?) -> RootState {
+    var state = rootState ?? RootState()
+
+    switch action {
+    case let walking as Walking:
+        state = reduce(walking, state: state)
+
+    default:
+        // Unrecognized/unhandled action
+        break
+    }
+
+    return state
 }

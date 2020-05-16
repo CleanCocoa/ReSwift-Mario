@@ -4,8 +4,6 @@ import UIKit
 import State
 import ReSwift
 
-let store = State.store()
-
 class ViewController: UIViewController {
     let playerViewController = PlayerViewController()
     let background = UIView().then {

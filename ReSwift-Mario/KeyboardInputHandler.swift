@@ -1,6 +1,7 @@
 //  Copyright © 2020 Christian Tietze. All rights reserved. Distributed under the MIT License.
 
 import UIKit
+import State
 
 class KeyboardInputHandler: UIResponder {
     override var keyCommands: [UIKeyCommand]? {
@@ -11,10 +12,10 @@ class KeyboardInputHandler: UIResponder {
     }
 
     @objc func leftArrowKeyPressed() {
-        print("Left")
+        store.dispatch(Walking.left)
     }
 
     @objc func rightArrowKeyPressed() {
-        print("Right")
+        store.dispatch(Walking.right)
     }
 }

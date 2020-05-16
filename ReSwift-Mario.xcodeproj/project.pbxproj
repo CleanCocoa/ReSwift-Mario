@@ -23,6 +23,8 @@
 		50BD6BA6246FF81E00C70433 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BA5246FF81E00C70433 /* PlayerViewController.swift */; };
 		50BD6BA8246FF84600C70433 /* NSLayoutConstraints+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BA7246FF84600C70433 /* NSLayoutConstraints+Helpers.swift */; };
 		50BD6BAA246FFA5000C70433 /* KeyboardInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BA9246FFA5000C70433 /* KeyboardInputHandler.swift */; };
+		50BD6BAC246FFBCD00C70433 /* WalkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BAB246FFBCD00C70433 /* WalkAction.swift */; };
+		50BD6BAE246FFC6E00C70433 /* ReduceWalkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BAD246FFC6E00C70433 /* ReduceWalkingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		50BD6BA5246FF81E00C70433 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		50BD6BA7246FF84600C70433 /* NSLayoutConstraints+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraints+Helpers.swift"; sourceTree = "<group>"; };
 		50BD6BA9246FFA5000C70433 /* KeyboardInputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputHandler.swift; sourceTree = "<group>"; };
+		50BD6BAB246FFBCD00C70433 /* WalkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkAction.swift; sourceTree = "<group>"; };
+		50BD6BAD246FFC6E00C70433 /* ReduceWalkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceWalkingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 			children = (
 				50BD6B80246FEC7800C70433 /* State.h */,
 				50BD6B9C246FECA400C70433 /* Store.swift */,
+				50BD6BAB246FFBCD00C70433 /* WalkAction.swift */,
 				50BD6B81246FEC7800C70433 /* Info.plist */,
 			);
 			path = State;
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				50BD6B8F246FEC7800C70433 /* Info.plist */,
+				50BD6BAD246FFC6E00C70433 /* ReduceWalkingTests.swift */,
 			);
 			path = StateTests;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 					};
 					50BD6B85246FEC7800C70433 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 50BD6B38246FD4E100C70433;
 					};
 				};
@@ -348,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BD6BAC246FFBCD00C70433 /* WalkAction.swift in Sources */,
 				50BD6B9D246FECA400C70433 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BD6BAE246FFC6E00C70433 /* ReduceWalkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FRMDA3XRGC;
 				INFOPLIST_FILE = StateTests/Info.plist;
@@ -626,6 +636,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.christiantietze.StateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReSwift-Mario.app/ReSwift-Mario";
@@ -636,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FRMDA3XRGC;
 				INFOPLIST_FILE = StateTests/Info.plist;
