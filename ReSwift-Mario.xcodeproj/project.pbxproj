@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,51 @@
 		50BD6B49246FD4E200C70433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BD6B47246FD4E200C70433 /* LaunchScreen.storyboard */; };
 		50BD6B51246FD8FC00C70433 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6B50246FD8FC00C70433 /* Then.swift */; };
 		50BD6B75246FE42200C70433 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6B74246FE42200C70433 /* SceneDelegate.swift */; };
+		50BD6B87246FEC7800C70433 /* State.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BD6B7E246FEC7800C70433 /* State.framework */; };
+		50BD6B90246FEC7900C70433 /* State.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BD6B80246FEC7800C70433 /* State.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50BD6B93246FEC7900C70433 /* State.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BD6B7E246FEC7800C70433 /* State.framework */; };
+		50BD6B94246FEC7900C70433 /* State.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50BD6B7E246FEC7800C70433 /* State.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50BD6B9D246FECA400C70433 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6B9C246FECA400C70433 /* Store.swift */; };
+		50BD6BA0246FED6800C70433 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 50BD6B9F246FED6800C70433 /* ReSwift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50BD6B88246FEC7800C70433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50BD6B31246FD4E100C70433 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50BD6B7D246FEC7800C70433;
+			remoteInfo = State;
+		};
+		50BD6B8A246FEC7800C70433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50BD6B31246FD4E100C70433 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50BD6B38246FD4E100C70433;
+			remoteInfo = "ReSwift-Mario";
+		};
+		50BD6B91246FEC7900C70433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50BD6B31246FD4E100C70433 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50BD6B7D246FEC7800C70433;
+			remoteInfo = State;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50BD6B98246FEC7900C70433 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50BD6B94246FEC7900C70433 /* State.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		50BD6B39246FD4E100C70433 /* ReSwift-Mario.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReSwift-Mario.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +72,12 @@
 		50BD6B52246FDA3000C70433 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		50BD6B53246FDA3000C70433 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		50BD6B74246FE42200C70433 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		50BD6B7E246FEC7800C70433 /* State.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = State.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50BD6B80246FEC7800C70433 /* State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		50BD6B81246FEC7800C70433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50BD6B86246FEC7800C70433 /* StateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50BD6B8F246FEC7800C70433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50BD6B9C246FECA400C70433 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +85,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BD6B93246FEC7900C70433 /* State.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50BD6B7B246FEC7800C70433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50BD6BA0246FED6800C70433 /* ReSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50BD6B83246FEC7800C70433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50BD6B87246FEC7800C70433 /* State.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +114,10 @@
 				50BD6B53246FDA3000C70433 /* LICENSE */,
 				50BD6B52246FDA3000C70433 /* README.md */,
 				50BD6B3B246FD4E100C70433 /* ReSwift-Mario */,
+				50BD6B7F246FEC7800C70433 /* State */,
+				50BD6B8C246FEC7800C70433 /* StateTests */,
 				50BD6B3A246FD4E100C70433 /* Products */,
+				50BD6B9E246FED6800C70433 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				50BD6B39246FD4E100C70433 /* ReSwift-Mario.app */,
+				50BD6B7E246FEC7800C70433 /* State.framework */,
+				50BD6B86246FEC7800C70433 /* StateTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,7 +146,43 @@
 			path = "ReSwift-Mario";
 			sourceTree = "<group>";
 		};
+		50BD6B7F246FEC7800C70433 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				50BD6B80246FEC7800C70433 /* State.h */,
+				50BD6B9C246FECA400C70433 /* Store.swift */,
+				50BD6B81246FEC7800C70433 /* Info.plist */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		50BD6B8C246FEC7800C70433 /* StateTests */ = {
+			isa = PBXGroup;
+			children = (
+				50BD6B8F246FEC7800C70433 /* Info.plist */,
+			);
+			path = StateTests;
+			sourceTree = "<group>";
+		};
+		50BD6B9E246FED6800C70433 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		50BD6B79246FEC7800C70433 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50BD6B90246FEC7900C70433 /* State.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		50BD6B38246FD4E100C70433 /* ReSwift-Mario */ = {
@@ -84,15 +192,60 @@
 				50BD6B35246FD4E100C70433 /* Sources */,
 				50BD6B36246FD4E100C70433 /* Frameworks */,
 				50BD6B37246FD4E100C70433 /* Resources */,
+				50BD6B98246FEC7900C70433 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				50BD6B92246FEC7900C70433 /* PBXTargetDependency */,
 			);
 			name = "ReSwift-Mario";
+			packageProductDependencies = (
+			);
 			productName = "ReSwift-Mario";
 			productReference = 50BD6B39246FD4E100C70433 /* ReSwift-Mario.app */;
 			productType = "com.apple.product-type.application";
+		};
+		50BD6B7D246FEC7800C70433 /* State */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50BD6B95246FEC7900C70433 /* Build configuration list for PBXNativeTarget "State" */;
+			buildPhases = (
+				50BD6B79246FEC7800C70433 /* Headers */,
+				50BD6B7A246FEC7800C70433 /* Sources */,
+				50BD6B7B246FEC7800C70433 /* Frameworks */,
+				50BD6B7C246FEC7800C70433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50BD6BA2246FEDC100C70433 /* PBXTargetDependency */,
+			);
+			name = State;
+			packageProductDependencies = (
+				50BD6B9F246FED6800C70433 /* ReSwift */,
+			);
+			productName = State;
+			productReference = 50BD6B7E246FEC7800C70433 /* State.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		50BD6B85246FEC7800C70433 /* StateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50BD6B99246FEC7900C70433 /* Build configuration list for PBXNativeTarget "StateTests" */;
+			buildPhases = (
+				50BD6B82246FEC7800C70433 /* Sources */,
+				50BD6B83246FEC7800C70433 /* Frameworks */,
+				50BD6B84246FEC7800C70433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50BD6B89246FEC7800C70433 /* PBXTargetDependency */,
+				50BD6B8B246FEC7800C70433 /* PBXTargetDependency */,
+			);
+			name = StateTests;
+			productName = StateTests;
+			productReference = 50BD6B86246FEC7800C70433 /* StateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -107,6 +260,14 @@
 					50BD6B38246FD4E100C70433 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					50BD6B7D246FEC7800C70433 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					50BD6B85246FEC7800C70433 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 50BD6B38246FD4E100C70433;
+					};
 				};
 			};
 			buildConfigurationList = 50BD6B34246FD4E100C70433 /* Build configuration list for PBXProject "ReSwift-Mario" */;
@@ -118,11 +279,16 @@
 				Base,
 			);
 			mainGroup = 50BD6B30246FD4E100C70433;
+			packageReferences = (
+				50BD6B76246FEC5300C70433 /* XCRemoteSwiftPackageReference "ReSwift" */,
+			);
 			productRefGroup = 50BD6B3A246FD4E100C70433 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				50BD6B38246FD4E100C70433 /* ReSwift-Mario */,
+				50BD6B7D246FEC7800C70433 /* State */,
+				50BD6B85246FEC7800C70433 /* StateTests */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +301,20 @@
 				50BD6B49246FD4E200C70433 /* LaunchScreen.storyboard in Resources */,
 				50BD6B46246FD4E200C70433 /* Assets.xcassets in Resources */,
 				50BD6B44246FD4E100C70433 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50BD6B7C246FEC7800C70433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50BD6B84246FEC7800C70433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +332,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		50BD6B7A246FEC7800C70433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50BD6B9D246FECA400C70433 /* Store.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50BD6B82246FEC7800C70433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50BD6B89246FEC7800C70433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50BD6B7D246FEC7800C70433 /* State */;
+			targetProxy = 50BD6B88246FEC7800C70433 /* PBXContainerItemProxy */;
+		};
+		50BD6B8B246FEC7800C70433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50BD6B38246FD4E100C70433 /* ReSwift-Mario */;
+			targetProxy = 50BD6B8A246FEC7800C70433 /* PBXContainerItemProxy */;
+		};
+		50BD6B92246FEC7900C70433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50BD6B7D246FEC7800C70433 /* State */;
+			targetProxy = 50BD6B91246FEC7900C70433 /* PBXContainerItemProxy */;
+		};
+		50BD6BA2246FEDC100C70433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 50BD6BA1246FEDC100C70433 /* ReSwift */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		50BD6B42246FD4E100C70433 /* Main.storyboard */ = {
@@ -291,6 +508,7 @@
 		50BD6B4E246FD4E200C70433 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FRMDA3XRGC;
@@ -309,6 +527,7 @@
 		50BD6B4F246FD4E200C70433 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FRMDA3XRGC;
@@ -321,6 +540,103 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		50BD6B96246FEC7900C70433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FRMDA3XRGC;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = State/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.christiantietze.State;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		50BD6B97246FEC7900C70433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FRMDA3XRGC;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = State/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.christiantietze.State;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		50BD6B9A246FEC7900C70433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FRMDA3XRGC;
+				INFOPLIST_FILE = StateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.christiantietze.StateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReSwift-Mario.app/ReSwift-Mario";
+			};
+			name = Debug;
+		};
+		50BD6B9B246FEC7900C70433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FRMDA3XRGC;
+				INFOPLIST_FILE = StateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.christiantietze.StateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReSwift-Mario.app/ReSwift-Mario";
 			};
 			name = Release;
 		};
@@ -345,7 +661,49 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		50BD6B95246FEC7900C70433 /* Build configuration list for PBXNativeTarget "State" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50BD6B96246FEC7900C70433 /* Debug */,
+				50BD6B97246FEC7900C70433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50BD6B99246FEC7900C70433 /* Build configuration list for PBXNativeTarget "StateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50BD6B9A246FEC7900C70433 /* Debug */,
+				50BD6B9B246FEC7900C70433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		50BD6B76246FEC5300C70433 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReSwift/ReSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		50BD6B9F246FED6800C70433 /* ReSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50BD6B76246FEC5300C70433 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
+		};
+		50BD6BA1246FEDC100C70433 /* ReSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50BD6B76246FEC5300C70433 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50BD6B31246FD4E100C70433 /* Project object */;
 }
