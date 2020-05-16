@@ -22,6 +22,7 @@
 		50BD6BA0246FED6800C70433 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 50BD6B9F246FED6800C70433 /* ReSwift */; };
 		50BD6BA6246FF81E00C70433 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BA5246FF81E00C70433 /* PlayerViewController.swift */; };
 		50BD6BA8246FF84600C70433 /* NSLayoutConstraints+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BA7246FF84600C70433 /* NSLayoutConstraints+Helpers.swift */; };
+		50BD6BAA246FFA5000C70433 /* KeyboardInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BA9246FFA5000C70433 /* KeyboardInputHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		50BD6B9C246FECA400C70433 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		50BD6BA5246FF81E00C70433 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		50BD6BA7246FF84600C70433 /* NSLayoutConstraints+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraints+Helpers.swift"; sourceTree = "<group>"; };
+		50BD6BA9246FFA5000C70433 /* KeyboardInputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				50BD6B3C246FD4E100C70433 /* AppDelegate.swift */,
+				50BD6BA9246FFA5000C70433 /* KeyboardInputHandler.swift */,
 				50BD6B74246FE42200C70433 /* SceneDelegate.swift */,
 				50BD6B40246FD4E100C70433 /* ViewController.swift */,
 				50BD6BA5246FF81E00C70433 /* PlayerViewController.swift */,
@@ -336,6 +339,7 @@
 				50BD6B3D246FD4E100C70433 /* AppDelegate.swift in Sources */,
 				50BD6BA8246FF84600C70433 /* NSLayoutConstraints+Helpers.swift in Sources */,
 				50BD6B75246FE42200C70433 /* SceneDelegate.swift in Sources */,
+				50BD6BAA246FFA5000C70433 /* KeyboardInputHandler.swift in Sources */,
 				50BD6BA6246FF81E00C70433 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
