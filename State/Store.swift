@@ -11,7 +11,7 @@ public func store() -> ReSwift.Store<RootState> {
     return ReSwift.Store(
         reducer: reduce(action:rootState:),
         state: RootState(),
-        middleware: [],
+        middleware: [loggingMiddleware],
         automaticallySkipsRepeats: false)
 }
 
