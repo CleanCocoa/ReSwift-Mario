@@ -1,8 +1,12 @@
 //  Copyright © 2020 Christian Tietze. All rights reserved. Distributed under the MIT License.
 
 import UIKit
+import State
+import ReSwift
 
-class ViewController: UIViewController {
+let store = State.store()
+
+class ViewController: UIViewController, ReSwift.StoreSubscriber {
     let player = UIView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.backgroundColor = UIColor.blue
@@ -21,6 +25,10 @@ class ViewController: UIViewController {
         addSky()
         addGround()
         addPlayer()
+
+        // Subscribing fires an update for the initial state immediately, so make sure all
+        // positional properties are set up already.
+        store.subscribe(self) { $0.select { ($0.x, $0.y)  }}
     }
 
     private func addSky() {
@@ -51,11 +59,18 @@ class ViewController: UIViewController {
             ]
         sizeAnchors.forEach(activate)
 
-        let positionAnchors = [
-            player.bottomAnchor.constraint(equalTo: ground.topAnchor),
-            player.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ]
-        positionAnchors.forEach(activate)
+        playerPositionConstraints = (
+            x: player.centerXAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            y: player.bottomAnchor.constraint(equalTo: ground.topAnchor, constant: 0)
+        )
+        [playerPositionConstraints.x, playerPositionConstraints.y].forEach(activate)
+    }
+
+    var playerPositionConstraints: (x: NSLayoutConstraint, y: NSLayoutConstraint)!
+
+    func newState(state position: (x: Double, y: Double)) {
+        playerPositionConstraints.x.constant = CGFloat(position.x)
+        playerPositionConstraints.y.constant = -CGFloat(position.y)
     }
 }
 

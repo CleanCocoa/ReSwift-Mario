@@ -2,7 +2,10 @@
 
 import ReSwift
 
-public struct RootState: ReSwift.StateType {}
+public struct RootState: ReSwift.StateType {
+    public let x: Double = 100
+    public let y: Double = 0
+}
 
 public func store() -> ReSwift.Store<RootState> {
     return ReSwift.Store(
