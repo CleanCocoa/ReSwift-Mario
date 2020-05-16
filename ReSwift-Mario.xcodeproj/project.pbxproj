@@ -25,6 +25,7 @@
 		50BD6BAA246FFA5000C70433 /* KeyboardInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BA9246FFA5000C70433 /* KeyboardInputHandler.swift */; };
 		50BD6BAC246FFBCD00C70433 /* WalkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BAB246FFBCD00C70433 /* WalkAction.swift */; };
 		50BD6BAE246FFC6E00C70433 /* ReduceWalkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BAD246FFC6E00C70433 /* ReduceWalkingTests.swift */; };
+		50BD6BB0246FFFA300C70433 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BAF246FFFA300C70433 /* UIViewController+Child.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		50BD6BA9246FFA5000C70433 /* KeyboardInputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputHandler.swift; sourceTree = "<group>"; };
 		50BD6BAB246FFBCD00C70433 /* WalkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkAction.swift; sourceTree = "<group>"; };
 		50BD6BAD246FFC6E00C70433 /* ReduceWalkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceWalkingTests.swift; sourceTree = "<group>"; };
+		50BD6BAF246FFFA300C70433 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				50BD6B40246FD4E100C70433 /* ViewController.swift */,
 				50BD6BA5246FF81E00C70433 /* PlayerViewController.swift */,
 				50BD6BA7246FF84600C70433 /* NSLayoutConstraints+Helpers.swift */,
+				50BD6BAF246FFFA300C70433 /* UIViewController+Child.swift */,
 				50BD6B50246FD8FC00C70433 /* Then.swift */,
 				50BD6B42246FD4E100C70433 /* Main.storyboard */,
 				50BD6B45246FD4E200C70433 /* Assets.xcassets */,
@@ -344,6 +347,7 @@
 				50BD6B41246FD4E100C70433 /* ViewController.swift in Sources */,
 				50BD6B51246FD8FC00C70433 /* Then.swift in Sources */,
 				50BD6B3D246FD4E100C70433 /* AppDelegate.swift in Sources */,
+				50BD6BB0246FFFA300C70433 /* UIViewController+Child.swift in Sources */,
 				50BD6BA8246FF84600C70433 /* NSLayoutConstraints+Helpers.swift in Sources */,
 				50BD6B75246FE42200C70433 /* SceneDelegate.swift in Sources */,
 				50BD6BAA246FFA5000C70433 /* KeyboardInputHandler.swift in Sources */,

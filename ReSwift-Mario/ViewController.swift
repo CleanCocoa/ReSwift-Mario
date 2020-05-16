@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     }
 
     private func addPlayer() {
-        view.addSubview(playerViewController.view)
+        add(childViewController: playerViewController)
         playerViewController.constrainPlayer(toGround: ground)
     }
 }
