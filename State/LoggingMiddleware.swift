@@ -5,7 +5,10 @@ import ReSwift
 let loggingMiddleware: Middleware<RootState> = { dispatch, getState in
     return { next in
         return { action in
-            print(action)
+            // Ignore FPS ticks to not spam the log with 60 messages per second.
+            if !(action is Tick) {
+                print(action)
+            }
             next(action)
         }
     }

@@ -26,7 +26,11 @@
 		50BD6BAC246FFBCD00C70433 /* WalkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BAB246FFBCD00C70433 /* WalkAction.swift */; };
 		50BD6BAE246FFC6E00C70433 /* ReduceWalkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BAD246FFC6E00C70433 /* ReduceWalkingTests.swift */; };
 		50BD6BB0246FFFA300C70433 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BAF246FFFA300C70433 /* UIViewController+Child.swift */; };
+		50BD6BB22470008D00C70433 /* FPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BB12470008D00C70433 /* FPSViewController.swift */; };
+		50BD6BB624700C9900C70433 /* Tick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BB524700C9900C70433 /* Tick.swift */; };
 		50BD6BB824700E4300C70433 /* LoggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BB724700E4300C70433 /* LoggingMiddleware.swift */; };
+		50BD6BBA2470101400C70433 /* FPSCounterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BB92470101400C70433 /* FPSCounterMiddleware.swift */; };
+		50BD6BBC2470356600C70433 /* CountingFPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BBB2470356600C70433 /* CountingFPS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +95,11 @@
 		50BD6BAB246FFBCD00C70433 /* WalkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkAction.swift; sourceTree = "<group>"; };
 		50BD6BAD246FFC6E00C70433 /* ReduceWalkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceWalkingTests.swift; sourceTree = "<group>"; };
 		50BD6BAF246FFFA300C70433 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
+		50BD6BB12470008D00C70433 /* FPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSViewController.swift; sourceTree = "<group>"; };
+		50BD6BB524700C9900C70433 /* Tick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tick.swift; sourceTree = "<group>"; };
 		50BD6BB724700E4300C70433 /* LoggingMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
+		50BD6BB92470101400C70433 /* FPSCounterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSCounterMiddleware.swift; sourceTree = "<group>"; };
+		50BD6BBB2470356600C70433 /* CountingFPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingFPS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 				50BD6BA9246FFA5000C70433 /* KeyboardInputHandler.swift */,
 				50BD6B74246FE42200C70433 /* SceneDelegate.swift */,
 				50BD6B40246FD4E100C70433 /* ViewController.swift */,
+				50BD6BB12470008D00C70433 /* FPSViewController.swift */,
 				50BD6BA5246FF81E00C70433 /* PlayerViewController.swift */,
 				50BD6BA7246FF84600C70433 /* NSLayoutConstraints+Helpers.swift */,
 				50BD6BAF246FFFA300C70433 /* UIViewController+Child.swift */,
@@ -169,8 +178,11 @@
 			children = (
 				50BD6B80246FEC7800C70433 /* State.h */,
 				50BD6B9C246FECA400C70433 /* Store.swift */,
+				50BD6BB92470101400C70433 /* FPSCounterMiddleware.swift */,
 				50BD6BB724700E4300C70433 /* LoggingMiddleware.swift */,
+				50BD6BB524700C9900C70433 /* Tick.swift */,
 				50BD6BAB246FFBCD00C70433 /* WalkAction.swift */,
+				50BD6BBB2470356600C70433 /* CountingFPS.swift */,
 				50BD6B81246FEC7800C70433 /* Info.plist */,
 			);
 			path = State;
@@ -354,6 +366,7 @@
 				50BD6BA8246FF84600C70433 /* NSLayoutConstraints+Helpers.swift in Sources */,
 				50BD6B75246FE42200C70433 /* SceneDelegate.swift in Sources */,
 				50BD6BAA246FFA5000C70433 /* KeyboardInputHandler.swift in Sources */,
+				50BD6BB22470008D00C70433 /* FPSViewController.swift in Sources */,
 				50BD6BA6246FF81E00C70433 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +375,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BD6BB624700C9900C70433 /* Tick.swift in Sources */,
+				50BD6BBC2470356600C70433 /* CountingFPS.swift in Sources */,
+				50BD6BBA2470101400C70433 /* FPSCounterMiddleware.swift in Sources */,
 				50BD6BAC246FFBCD00C70433 /* WalkAction.swift in Sources */,
 				50BD6B9D246FECA400C70433 /* Store.swift in Sources */,
 				50BD6BB824700E4300C70433 /* LoggingMiddleware.swift in Sources */,

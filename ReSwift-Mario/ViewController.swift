@@ -5,6 +5,8 @@ import State
 import ReSwift
 
 class ViewController: UIViewController {
+    let fpsViewController = FPSViewController()
+
     let playerViewController = PlayerViewController()
     let background = UIView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -20,12 +22,14 @@ class ViewController: UIViewController {
         addSky()
         addGround()
         addPlayer()
+        addFPS()
 
         // Subscribing fires an update for the initial state immediately, so make sure all
         // positional properties are set up already.
         store.subscribe(playerViewController) {
             $0.select(PlayerViewController.PlayerPosition.init(rootState:))
                 .skipRepeats() }
+        store.subscribe(fpsViewController) { $0.select { $0.fps }.skipRepeats() }
     }
 
     private func addSky() {
@@ -50,5 +54,9 @@ class ViewController: UIViewController {
     private func addPlayer() {
         add(childViewController: playerViewController)
         playerViewController.constrainPlayer(toGround: ground)
+    }
+
+    private func addFPS() {
+        add(childViewController: fpsViewController)
     }
 }
