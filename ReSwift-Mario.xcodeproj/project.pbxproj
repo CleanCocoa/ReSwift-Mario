@@ -20,6 +20,8 @@
 		50BD6B94246FEC7900C70433 /* State.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50BD6B7E246FEC7800C70433 /* State.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50BD6B9D246FECA400C70433 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6B9C246FECA400C70433 /* Store.swift */; };
 		50BD6BA0246FED6800C70433 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 50BD6B9F246FED6800C70433 /* ReSwift */; };
+		50BD6BA6246FF81E00C70433 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BA5246FF81E00C70433 /* PlayerViewController.swift */; };
+		50BD6BA8246FF84600C70433 /* NSLayoutConstraints+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BA7246FF84600C70433 /* NSLayoutConstraints+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		50BD6B86246FEC7800C70433 /* StateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD6B8F246FEC7800C70433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50BD6B9C246FECA400C70433 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		50BD6BA5246FF81E00C70433 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		50BD6BA7246FF84600C70433 /* NSLayoutConstraints+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraints+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 				50BD6B3C246FD4E100C70433 /* AppDelegate.swift */,
 				50BD6B74246FE42200C70433 /* SceneDelegate.swift */,
 				50BD6B40246FD4E100C70433 /* ViewController.swift */,
+				50BD6BA5246FF81E00C70433 /* PlayerViewController.swift */,
+				50BD6BA7246FF84600C70433 /* NSLayoutConstraints+Helpers.swift */,
 				50BD6B50246FD8FC00C70433 /* Then.swift */,
 				50BD6B42246FD4E100C70433 /* Main.storyboard */,
 				50BD6B45246FD4E200C70433 /* Assets.xcassets */,
@@ -328,7 +334,9 @@
 				50BD6B41246FD4E100C70433 /* ViewController.swift in Sources */,
 				50BD6B51246FD8FC00C70433 /* Then.swift in Sources */,
 				50BD6B3D246FD4E100C70433 /* AppDelegate.swift in Sources */,
+				50BD6BA8246FF84600C70433 /* NSLayoutConstraints+Helpers.swift in Sources */,
 				50BD6B75246FE42200C70433 /* SceneDelegate.swift in Sources */,
+				50BD6BA6246FF81E00C70433 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
