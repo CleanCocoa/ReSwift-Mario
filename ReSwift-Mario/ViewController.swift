@@ -59,11 +59,11 @@ class ViewController: UIViewController {
     private func addFPS() {
         add(childViewController: fpsViewController)
     }
-}
 
-// MARK: - User Input
+    // MARK: - User Input
 
-extension ViewController {
+    private var heldKeys: Set<Key> = []
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         // If this is the screen, tapping next to the player image equals pressing the direction key:
@@ -72,17 +72,17 @@ extension ViewController {
         //
         //   left ^^^^           ^^^^ right
         if playerViewController.view.frame.minX - touch.location(in: self.view).x > 0 {
+            heldKeys.insert(.left)
             store.dispatch(HoldingKey(key: .left))
         }
         if touch.location(in: self.view).x - playerViewController.view.frame.maxX > 0 {
+            heldKeys.insert(.right)
             store.dispatch(HoldingKey(key: .right))
         }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // When the finger is lifted, just reset all keys. We can get better at recognizing the last command later :)
-        store.dispatch(RaisingKey(key: .right))
-        store.dispatch(RaisingKey(key: .left))
-        store.dispatch(RaisingKey(key: .jump))
+        heldKeys.map(RaisingKey.init(key:)).forEach(store.dispatch)
+        heldKeys = []
     }
 }
