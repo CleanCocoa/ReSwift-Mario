@@ -2,7 +2,9 @@
 
 import ReSwift
 
-public enum Walking: ReSwift.Action {
+/// Internal action to actually move the player character. Is produced when movement keys are
+/// held down once per frame/tick.
+enum Walking: ReSwift.Action {
     case left, right
 }
 

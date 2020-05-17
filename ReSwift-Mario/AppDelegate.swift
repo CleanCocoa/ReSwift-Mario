@@ -8,10 +8,10 @@ let store = State.store()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    let keyboardInputHandler = KeyboardInputHandler()
+    let keyInputHandler = KeyInputHandler()
 
     override var next: UIResponder? {
-        return keyboardInputHandler
+        return keyInputHandler
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

@@ -2,10 +2,16 @@
 
 import ReSwift
 
+public enum Key: Hashable {
+    case left, right, jump
+}
+
 public struct RootState: ReSwift.StateType, Equatable {
     /// Counted frames; internally used as transient state.
     internal var ticksCounted = 0.0
     public var fps = 0.0
+
+    public var keysHeld: Set<Key> = []
 
     public var x: Double = 100
     public var y: Double = 0
@@ -19,7 +25,7 @@ public func store() -> ReSwift.Store<RootState> {
             return appliableAction.applied(to: state)
         },
         state: RootState(),
-        middleware: [loggingMiddleware, FPSCounterMiddleware],
+        middleware: [loggingMiddleware, FPSCounterMiddleware, movementMiddleware],
         automaticallySkipsRepeats: false)
 }
 
