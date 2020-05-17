@@ -7,6 +7,7 @@ class KeyInputHandler: UIResponder {
     override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         for press in presses {
             switch press.type {
+            case .upArrow:    keyDown(.jump)
             case .leftArrow:  keyDown(.left)
             case .rightArrow: keyDown(.right)
             default: super.pressesBegan(presses, with: event)
@@ -17,6 +18,7 @@ class KeyInputHandler: UIResponder {
     override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         for press in presses {
             switch press.type {
+            case .upArrow:    keyUp(.jump)
             case .leftArrow:  keyUp(.left)
             case .rightArrow: keyUp(.right)
             default: super.pressesEnded(presses, with: event)

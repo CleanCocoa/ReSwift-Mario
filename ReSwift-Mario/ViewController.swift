@@ -62,8 +62,6 @@ class ViewController: UIViewController {
 
     // MARK: - User Input
 
-    private var heldKeys: Set<Key> = []
-
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         // If this is the screen, tapping next to the player image equals pressing the direction key:
@@ -71,18 +69,21 @@ class ViewController: UIViewController {
         //    |        [Player]        |
         //
         //   left ^^^^           ^^^^ right
-        if playerViewController.view.frame.minX - touch.location(in: self.view).x > 0 {
-            heldKeys.insert(.left)
+
+        let touchX = touch.location(in: self.view).x
+
+        /// Player position plus some fat fingering slack to the sides.
+        let playerSpace = (playerViewController.view.frame.minX - 8 ... playerViewController.view.frame.maxX + 8)
+        if playerSpace.contains(touchX) {
+            store.dispatch(HoldingKey(key: .jump))
+        } else if playerSpace.lowerBound - touchX > 0 {
             store.dispatch(HoldingKey(key: .left))
-        }
-        if touch.location(in: self.view).x - playerViewController.view.frame.maxX > 0 {
-            heldKeys.insert(.right)
+        } else if touchX - playerSpace.upperBound > 0 {
             store.dispatch(HoldingKey(key: .right))
         }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        heldKeys.map(RaisingKey.init(key:)).forEach(store.dispatch)
-        heldKeys = []
+        store.dispatch(RaisingAllKeys())
     }
 }
