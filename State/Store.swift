@@ -38,9 +38,7 @@ public func store() -> ReSwift.Store<RootState> {
         state: RootState(),
         middleware: [
             // Internal housekeeping middleware for debugging
-            loggingMiddleware, FPSCounterMiddleware,
-            // Game loop
-            movementMiddleware
+            loggingMiddleware, FPSCounterMiddleware
         ],
         automaticallySkipsRepeats: false)
 }

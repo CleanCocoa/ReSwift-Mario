@@ -5,12 +5,12 @@ import XCTest
 
 class ReduceWalkingTests: XCTestCase {
     func testWalkingLeft() {
-        let result = Walking.left.applied(to: RootState(x: 123, y: 456))
-        XCTAssertEqual(result, RootState(x: 123 - 2, y: 456))
+        let result = walk(RootState(keysHeld: [.left], x: 123))
+        XCTAssertEqual(result, RootState(keysHeld: [.left], x: 123 - 2))
     }
 
     func testWalkingRight() {
-        let result = Walking.right.applied(to: RootState(x: 987, y: 654))
-        XCTAssertEqual(result, RootState(x: 987 + 2, y: 654))
+        let result = walk(RootState(keysHeld: [.right], x: 987))
+        XCTAssertEqual(result, RootState(keysHeld: [.right], x: 987 + 2))
     }
 }

@@ -4,6 +4,7 @@ import ReSwift
 
 let initialJumpVelocity: Double = 8.0
 let gravity: Double = 0.3
+let walkingSpeed: Double = 2
 
 /// Notifies the world/state of a tick event, used to limit the actual FPS.
 /// This action is internal because we don't want the UI or user to interfere.
@@ -23,6 +24,8 @@ extension Tick: StateApplicable {
         state = jump(state)
         state = physics(state)
         state = gravity(state)
+
+        state = walk(state)
 
         return state
     }
@@ -58,5 +61,20 @@ func gravity(_ state:  RootState) -> RootState {
             return .resting
         }
     }()
+    return state
+}
+
+func walk(_ state: RootState) -> RootState {
+    let offset: Double = {
+        if state.keysHeld.contains(.left) {
+            return -walkingSpeed
+        } else if state.keysHeld.contains(.right) {
+            return +walkingSpeed
+        } else {
+            return 0
+        }
+    }()
+    var state = state
+    state.x += offset
     return state
 }
