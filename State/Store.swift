@@ -40,7 +40,7 @@ public func store() -> ReSwift.Store<RootState> {
             // Internal housekeeping middleware for debugging
             loggingMiddleware, FPSCounterMiddleware,
             // Game loop
-            jumpMiddleware, movementMiddleware, gravityMiddleware, physicsMiddleware
+            movementMiddleware
         ],
         automaticallySkipsRepeats: false)
 }
