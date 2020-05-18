@@ -65,16 +65,31 @@ func gravity(_ state:  RootState) -> RootState {
 }
 
 func walk(_ state: RootState) -> RootState {
-    let offset: Double = {
-        if state.keysHeld.contains(.left) {
-            return -walkingSpeed
-        } else if state.keysHeld.contains(.right) {
-            return +walkingSpeed
-        } else {
-            return 0
-        }
-    }()
     var state = state
-    state.x += offset
+    state.x += state.keysHeld
+        .map { $0.velocity }
+        .reduce(Velocity(x: 0, y: 0), +)
+        .x
     return state
 }
+
+struct Velocity {
+    let x: Double
+    let y: Double
+
+    static func + (_ lhs: Velocity, _ rhs: Velocity) -> Velocity {
+        return Velocity(x: lhs.x + rhs.x,
+                        y: lhs.y + rhs.y)
+    }
+}
+
+extension Key {
+    var velocity: Velocity {
+        switch self {
+        case .left:  return Velocity(x: -walkingSpeed, y: 0)
+        case .right: return Velocity(x: +walkingSpeed, y: 0)
+        case .jump:  return Velocity(x: 0, y: 0)
+        }
+    }
+}
+
