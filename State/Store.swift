@@ -2,13 +2,47 @@
 
 import ReSwift
 
+struct Velocity: AdditiveArithmetic {
+    static var zero = Velocity(x: 0, y: 0)
+
+    var x: Double
+    var y: Double
+
+    static func + (lhs: Velocity, rhs: Velocity) -> Velocity {
+        return Velocity(x: lhs.x + rhs.x,
+                        y: lhs.y + rhs.y)
+    }
+
+    static func - (lhs: Velocity, rhs: Velocity) -> Velocity {
+        return Velocity(x: lhs.x - rhs.x,
+                        y: lhs.y - rhs.y)
+    }
+
+    static func -= (lhs: inout Velocity, rhs: Velocity) {
+        lhs.x -= rhs.x
+        lhs.y -= rhs.y
+    }
+
+    static func += (lhs: inout Velocity, rhs: Velocity) {
+        lhs.x += rhs.x
+        lhs.y += rhs.y
+    }
+}
+
 public enum Key: Hashable {
     case left, right, jump
 }
 
+/// Jump animation phases.
 enum Jump: Equatable {
     case resting
     case airborne(velocity: Double)
+}
+
+/// Walk animation direction.
+enum WalkDirection {
+    case none
+    case left, right
 }
 
 public struct RootState: ReSwift.StateType, Equatable {
@@ -26,6 +60,7 @@ public struct RootState: ReSwift.StateType, Equatable {
 
     // MARK: Animations
     internal var jump: Jump = .resting
+    internal var walkDirection: WalkDirection = .none
 }
 
 public func store() -> ReSwift.Store<RootState> {
