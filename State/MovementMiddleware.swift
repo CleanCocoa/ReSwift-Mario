@@ -5,7 +5,7 @@ import ReSwift
 let movementMiddleware: Middleware<RootState> = { dispatch, getState in
     return { next in
         return { action in
-            defer { next(action) }
+            next(action)
 
             // Only move once per tick to have a constant movement speed, bound to the FPS.
             guard action is Tick else { return }

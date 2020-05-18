@@ -6,15 +6,26 @@ public enum Key: Hashable {
     case left, right, jump
 }
 
+enum Jump: Equatable {
+    case resting
+    case airborne(velocity: Double)
+}
+
 public struct RootState: ReSwift.StateType, Equatable {
+    // MARK: Game state
     /// Counted frames; internally used as transient state.
     internal var ticksCounted = 0.0
     public var fps = 0.0
 
+    // MARK: User controls
     public var keysHeld: Set<Key> = []
 
+    // MARK: Player position
     public var x: Double = 100
     public var y: Double = 0
+
+    // MARK: Animations
+    internal var jump: Jump = .resting
 }
 
 public func store() -> ReSwift.Store<RootState> {
@@ -25,7 +36,12 @@ public func store() -> ReSwift.Store<RootState> {
             return appliableAction.applied(to: state)
         },
         state: RootState(),
-        middleware: [loggingMiddleware, FPSCounterMiddleware, movementMiddleware],
+        middleware: [
+            // Internal housekeeping middleware for debugging
+            loggingMiddleware, FPSCounterMiddleware,
+            // Game loop
+            jumpingMiddleware, movementMiddleware
+        ],
         automaticallySkipsRepeats: false)
 }
 

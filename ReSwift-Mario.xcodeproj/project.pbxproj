@@ -10,6 +10,9 @@
 		5097B2C624713F5C00746646 /* RaisingAllKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097B2C524713F5C00746646 /* RaisingAllKeys.swift */; };
 		5097B2C824713FA900746646 /* ReduceHoldingKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097B2C724713FA900746646 /* ReduceHoldingKeyTests.swift */; };
 		5097B2CC2471417E00746646 /* ReduceRaisingKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097B2CB2471417E00746646 /* ReduceRaisingKeyTests.swift */; };
+		5097B32224729E0D00746646 /* JumpingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097B32124729E0D00746646 /* JumpingMiddleware.swift */; };
+		5097B3242472A3CC00746646 /* SettingY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097B3232472A3CC00746646 /* SettingY.swift */; };
+		5097B3262472A3DD00746646 /* Jumping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097B3252472A3DD00746646 /* Jumping.swift */; };
 		50BD6B3D246FD4E100C70433 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6B3C246FD4E100C70433 /* AppDelegate.swift */; };
 		50BD6B41246FD4E100C70433 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6B40246FD4E100C70433 /* ViewController.swift */; };
 		50BD6B44246FD4E100C70433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BD6B42246FD4E100C70433 /* Main.storyboard */; };
@@ -81,6 +84,9 @@
 		5097B2C524713F5C00746646 /* RaisingAllKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisingAllKeys.swift; sourceTree = "<group>"; };
 		5097B2C724713FA900746646 /* ReduceHoldingKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceHoldingKeyTests.swift; sourceTree = "<group>"; };
 		5097B2CB2471417E00746646 /* ReduceRaisingKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceRaisingKeyTests.swift; sourceTree = "<group>"; };
+		5097B32124729E0D00746646 /* JumpingMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpingMiddleware.swift; sourceTree = "<group>"; };
+		5097B3232472A3CC00746646 /* SettingY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingY.swift; sourceTree = "<group>"; };
+		5097B3252472A3DD00746646 /* Jumping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumping.swift; sourceTree = "<group>"; };
 		50BD6B39246FD4E100C70433 /* ReSwift-Mario.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReSwift-Mario.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD6B3C246FD4E100C70433 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50BD6B40246FD4E100C70433 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -195,9 +201,12 @@
 				5097B2C524713F5C00746646 /* RaisingAllKeys.swift */,
 				50BD6BB92470101400C70433 /* FPSCounterMiddleware.swift */,
 				50BD6BB724700E4300C70433 /* LoggingMiddleware.swift */,
+				5097B32124729E0D00746646 /* JumpingMiddleware.swift */,
 				50BD6BC124703EA200C70433 /* MovementMiddleware.swift */,
 				50BD6BB524700C9900C70433 /* Tick.swift */,
 				50BD6BAB246FFBCD00C70433 /* Walking.swift */,
+				5097B3232472A3CC00746646 /* SettingY.swift */,
+				5097B3252472A3DD00746646 /* Jumping.swift */,
 				50BD6BBB2470356600C70433 /* CountingFPS.swift */,
 				50BD6B81246FEC7800C70433 /* Info.plist */,
 			);
@@ -393,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5097B3242472A3CC00746646 /* SettingY.swift in Sources */,
 				50BD6BB624700C9900C70433 /* Tick.swift in Sources */,
 				5097B2C624713F5C00746646 /* RaisingAllKeys.swift in Sources */,
 				50BD6BC224703EA200C70433 /* MovementMiddleware.swift in Sources */,
@@ -400,9 +410,11 @@
 				50BD6BBE24703BDD00C70433 /* HoldingKey.swift in Sources */,
 				50BD6BBC2470356600C70433 /* CountingFPS.swift in Sources */,
 				50BD6BBA2470101400C70433 /* FPSCounterMiddleware.swift in Sources */,
+				5097B32224729E0D00746646 /* JumpingMiddleware.swift in Sources */,
 				50BD6BAC246FFBCD00C70433 /* Walking.swift in Sources */,
 				50BD6B9D246FECA400C70433 /* Store.swift in Sources */,
 				50BD6BB824700E4300C70433 /* LoggingMiddleware.swift in Sources */,
+				5097B3262472A3DD00746646 /* Jumping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
