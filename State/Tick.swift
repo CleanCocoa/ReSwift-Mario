@@ -16,20 +16,23 @@ internal struct Tick: ReSwift.Action {
 
 extension Tick: StateApplicable {
     func applied(to state: RootState) -> RootState {
-        var state = state
-        state.ticksCounted += 1
-
-        // The order of the jump phase reducers is important: you don't want `gravity` to stop the
-        // jump right after it has started, but before the Y-coordinate was affected.
-        state = gravity(state)
-
-        state = move(state)
-        state = walk(state)
-        state = jump(state)
-        state = physics(state)
-
         return state
+            |> incrementTicks
+            // The order of movement reducers is important: you don't want `gravity` to stop the
+            // jump right after it has started, so we apply it on the next tick after a jump.
+            |> gravity
+            |> move
+            |> walk
+            // Start jumping here, if possible.
+            |> jump
+            |> physics
     }
+}
+
+func incrementTicks(_ state: RootState) -> RootState {
+    var state = state
+    state.ticksCounted += 1
+    return state
 }
 
 /// Start the jump, if possible. (That is, if not already mid-air and the jump command was given.)

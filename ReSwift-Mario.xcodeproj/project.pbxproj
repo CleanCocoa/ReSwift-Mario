@@ -35,6 +35,7 @@
 		50BD6BBC2470356600C70433 /* CountingFPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BBB2470356600C70433 /* CountingFPS.swift */; };
 		50BD6BBE24703BDD00C70433 /* HoldingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BBD24703BDD00C70433 /* HoldingKey.swift */; };
 		50BD6BC024703E7E00C70433 /* RaisingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD6BBF24703E7E00C70433 /* RaisingKey.swift */; };
+		50CF2E6524731F9E001EF9A5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CF2E6424731F9E001EF9A5 /* Operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		50BD6BBB2470356600C70433 /* CountingFPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingFPS.swift; sourceTree = "<group>"; };
 		50BD6BBD24703BDD00C70433 /* HoldingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingKey.swift; sourceTree = "<group>"; };
 		50BD6BBF24703E7E00C70433 /* RaisingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisingKey.swift; sourceTree = "<group>"; };
+		50CF2E6424731F9E001EF9A5 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			children = (
 				50BD6B80246FEC7800C70433 /* State.h */,
 				50BD6B9C246FECA400C70433 /* Store.swift */,
+				50CF2E6424731F9E001EF9A5 /* Operators.swift */,
 				50BD6BBD24703BDD00C70433 /* HoldingKey.swift */,
 				50BD6BBF24703E7E00C70433 /* RaisingKey.swift */,
 				5097B2C524713F5C00746646 /* RaisingAllKeys.swift */,
@@ -395,6 +398,7 @@
 				50BD6BBA2470101400C70433 /* FPSCounterMiddleware.swift in Sources */,
 				50BD6B9D246FECA400C70433 /* Store.swift in Sources */,
 				50BD6BB824700E4300C70433 /* LoggingMiddleware.swift in Sources */,
+				50CF2E6524731F9E001EF9A5 /* Operators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
